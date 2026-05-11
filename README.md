@@ -1,6 +1,6 @@
 # Codex Claude Delegation
 
-English | [中文](docs/README.zh-CN.md)
+English | [中文](docs/README.zh-CN.md) | [AI Integration Guide](docs/AI-INTEGRATION.md)
 
 A small, local-first Codex skill package that lets OpenAI Codex delegate bounded work to the local Claude Code CLI.
 
@@ -51,6 +51,24 @@ claude --version
 
 ## Install
 
+### Quick Install
+
+Run this in PowerShell:
+
+```powershell
+irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
+```
+
+If the skill already exists and you want to overwrite it:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& ([scriptblock]::Create((irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1))) -Force"
+```
+
+Restart Codex after installing so it can load the new skill.
+
+### Install From A Local Clone
+
 Clone the repository, then run:
 
 ```powershell
@@ -63,7 +81,9 @@ Overwrite an existing install:
 .\install.ps1 -Force
 ```
 
-Restart Codex after installing so it can load the new skill.
+### Ask AI To Install It
+
+If you want Codex or Claude Code to install this package for you, copy the prompts in [AI Integration Guide](docs/AI-INTEGRATION.md).
 
 ## Usage
 
@@ -154,4 +174,3 @@ codex-claude-delegation/
 - Add a direct `claude-review` convenience wrapper.
 - Add optional integration with bridge projects such as CCB or PAL MCP.
 - Add a test script that verifies local Claude availability and skill install health.
-

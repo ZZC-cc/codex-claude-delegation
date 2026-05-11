@@ -1,6 +1,6 @@
 # Codex Claude Delegation
 
-[English](../README.md) | 中文
+[English](../README.md) | 中文 | [AI 接入指南](AI-INTEGRATION.zh-CN.md)
 
 这是一个轻量、本地优先的 Codex Skill 项目，用来让 OpenAI Codex 把边界清晰的任务委派给本机 Claude Code CLI。
 
@@ -51,6 +51,24 @@ claude --version
 
 ## 安装
 
+### 快速安装
+
+在 PowerShell 里运行：
+
+```powershell
+irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
+```
+
+如果已经安装过，需要覆盖：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& ([scriptblock]::Create((irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1))) -Force"
+```
+
+安装后需要重启 Codex，新的 Skill 才会被加载。
+
+### 从本地 clone 安装
+
 克隆仓库后运行：
 
 ```powershell
@@ -63,7 +81,9 @@ claude --version
 .\install.ps1 -Force
 ```
 
-安装后需要重启 Codex，新的 Skill 才会被加载。
+### 让 AI 帮你安装
+
+如果你想让 Codex 或 Claude Code 帮你安装这个包，可以复制 [AI 接入指南](AI-INTEGRATION.zh-CN.md) 里的提示词。
 
 ## 使用方式
 
@@ -154,4 +174,3 @@ codex-claude-delegation/
 - 增加 `claude-review` 便利 wrapper。
 - 可选接入 CCB、PAL MCP 等 bridge 项目。
 - 增加健康检查脚本，验证 Claude CLI 和 Skill 安装状态。
-
