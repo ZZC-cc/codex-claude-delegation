@@ -1,0 +1,6 @@
+.codex-claude-delegation/
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
