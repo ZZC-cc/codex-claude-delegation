@@ -53,7 +53,24 @@ claude --version
 
 ### Quick Install
 
-Run this in PowerShell:
+Ask an AI assistant to install it for you:
+
+```text
+Install this Codex skill package for me:
+https://github.com/ZZC-cc/codex-claude-delegation
+
+Use the quick installer:
+irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
+
+After installation, verify:
+1. The skill exists at %USERPROFILE%\.codex\skills\claude-delegation.
+2. SKILL.md, scripts\invoke-claude.ps1, and references\delegation-contract.md exist.
+3. Claude Code is available with `claude --version`.
+
+Do not touch secrets, auth tokens, credential stores, or unrelated Codex configuration. Tell me to restart Codex when done.
+```
+
+Or run it yourself in PowerShell:
 
 ```powershell
 irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
@@ -81,9 +98,10 @@ Overwrite an existing install:
 .\install.ps1 -Force
 ```
 
-### Ask AI To Install It
+### More AI Prompts
 
-If you want Codex or Claude Code to install this package for you, copy the prompts in [AI Integration Guide](docs/AI-INTEGRATION.md).
+For more Codex and Claude Code handoff prompts, see [AI Integration Guide](docs/AI-INTEGRATION.md).
+
 
 ## Usage
 

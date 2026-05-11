@@ -53,7 +53,24 @@ claude --version
 
 ### 快速安装
 
-在 PowerShell 里运行：
+复制下面这段给 Codex、Claude Code 或其他 AI 编程助手，让它直接帮你安装：
+
+```text
+请帮我安装这个 Codex Skill 包：
+https://github.com/ZZC-cc/codex-claude-delegation
+
+请使用快速安装脚本：
+irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
+
+安装后请验证：
+1. Skill 位于 %USERPROFILE%\.codex\skills\claude-delegation。
+2. SKILL.md、scripts\invoke-claude.ps1、references\delegation-contract.md 都存在。
+3. 本机 Claude Code 可以通过 `claude --version` 调用。
+
+不要触碰 secrets、auth tokens、credential stores 或无关的 Codex 配置。完成后提醒我重启 Codex。
+```
+
+或者自己在 PowerShell 里运行：
 
 ```powershell
 irm https://raw.githubusercontent.com/ZZC-cc/codex-claude-delegation/main/install-from-github.ps1 | iex
@@ -81,9 +98,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "& ([scriptblock]::Create
 .\install.ps1 -Force
 ```
 
-### 让 AI 帮你安装
+### 更多 AI 提示词
 
-如果你想让 Codex 或 Claude Code 帮你安装这个包，可以复制 [AI 接入指南](AI-INTEGRATION.zh-CN.md) 里的提示词。
+如果你想看更完整的 Codex / Claude Code 接入提示词，可以参考 [AI 接入指南](AI-INTEGRATION.zh-CN.md)。
+
 
 ## 使用方式
 
